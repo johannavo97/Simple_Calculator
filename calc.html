@@ -2,36 +2,35 @@
     <head>
         <title>Calculator</title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="calc.js"></script>
     </head>
     <body>
         <div id="main">
-            <h1>Calculator</h1>
-            <input type="text" name="display" id="display">
+            <input id="display" readonly>
             <div id="keys">
-                <button onclick="addNumber(7)">7</button>
-                <button onclick="addNumber(8)">8</button>
-                <button onclick="addNumber(9)">9</button>
-                <button onclick="addOperator('/')" class="operator-btn">/</button>
+                <button onclick="appendToDisplay('7')">7</button>
+                <button onclick="appendToDisplay('8')">8</button>
+                <button onclick="appendToDisplay('9')">9</button>
+                <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
 
-                <button onclick="addNumber(4)">4</button>
-                <button onclick="addNumber(5)">5</button>
-                <button onclick="addNumber(6)">6</button>
-                <button  onclick="addOperator('*')" class="operator-btn">*</button>
+                <button onclick="appendToDisplay('4')">4</button>
+                <button onclick="appendToDisplay('5')">5</button>
+                <button onclick="appendToDisplay('6')">6</button>
+                <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
                 
-                <button onclick="addNumber(1)">1</button>
-                <button onclick="addNumber(2)">2</button>
-                <button onclick="addNumber(3)">3</button>
-                <button onclick="addOperator('+')" class="operator-btn">+</button>
+                <button onclick="appendToDisplay('1')">1</button>
+                <button onclick="appendToDisplay('2')">2</button>
+                <button onclick="aappendToDisplay('3')">3</button>
+                <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
             
-                <button onclick="addNumber(0)">0</button>
-                <button onclick="addOperator('.')">.</button>
-                <button onclick="calculateResult()">=</button>
-                <button onclick="addOperator('-')" class="operator-btn">-</button>
+                <button onclick="appendToDisplay('0')">0</button>
+                <button onclick="appendToDisplay('.')">.</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
             </div>
             <div id="clear">
                 <button onclick="clearDisplay()" class="operator-btn">C</button>
             </div>
         </div>
+        <script src="calc.js"></script>
     </body>
 </html>
